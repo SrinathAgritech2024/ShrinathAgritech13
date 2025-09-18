@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clients Section – Softer Green Theme</title>
+  <style>
+    :root{
+      --green-700:#14804a;   /* headers, borders */
+      --green-500:#19a463;   /* highlights */
+      --green-300:#b0eacb;   /* subtle accents */
+      --green-100:#f1fbf6;   /* soft bg */
+      --text-dark:#073424;
+      --text:#083a28;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--text);background:#ffffff}
+
+    .clients-section{
+      background:linear-gradient(180deg, var(--green-100), var(--white));
+      padding:56px 18px 64px;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .container{max-width:1120px;margin:0 auto}
+
+    .header{ text-align:center; color:var(--text-dark); margin-bottom:28px}
+    .eyebrow{ display:inline-block; padding:6px 12px; background:var(--green-100); border:1px solid var(--green-300); border-radius:999px; font-size:12px; letter-spacing:.12em; text-transform:uppercase}
+    h2{ margin:10px 0 8px; font-size:clamp(22px,4vw,34px); color:var(--green-700) }
+    .sub{ margin:0; font-size:clamp(14px,2.3vw,16px); color:var(--text); opacity:.8 }
+
+    .featured{
+      display:grid; grid-template-columns:1fr; gap:14px; margin:26px auto 22px; width:min(920px, 100%);
+      background:#fff; border:1px solid var(--green-300); border-radius:22px; padding:14px;
+      box-shadow:0 6px 16px rgba(0,0,0,.08);
+    }
+    .frame{ position:relative; border-radius:18px; overflow:hidden; background:var(--green-100); border:1px solid var(--green-300)}
+    .frame img{ width:100%; height:100%; display:block; object-fit:cover; aspect-ratio:16/9 }
+
+    .hint{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap }
+    .hint small{ color:var(--text-dark); opacity:.9 }
+    .copy{ user-select:all; font-family:ui-monospace, monospace; font-size:12px; color:var(--text); opacity:.9 }
+
+    .grid{ display:grid; gap:14px; grid-template-columns:repeat(2,1fr)}
+    @media (min-width:560px){ .grid{ grid-template-columns:repeat(3,1fr) } }
+    @media (min-width:820px){ .grid{ grid-template-columns:repeat(5,1fr) } }
+
+    .card{ background:#fff; border:1px solid var(--green-300); border-radius:18px; padding:12px; transition:transform .2s ease, box-shadow .2s ease }
+    .card:hover{ transform:translateY(-4px); box-shadow:0 12px 22px rgba(0,0,0,.12) }
+    .logo{ position:relative; border-radius:12px; overflow:hidden; background:var(--green-100); aspect-ratio:1/1; display:grid; place-items:center }
+    .logo img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    .tag{ margin-top:10px; font-size:12px; color:var(--text-dark); opacity:.9; text-align:center; }
+
+    .footer-note{ text-align:center; color:var(--text); opacity:.7; margin-top:18px; font-size:12px }
+
+    .uploader{ display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; margin-top:6px }
+    .btn{ border:1px solid var(--green-300); background:var(--green-100); color:var(--green-700); padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600 }
+    .btn:active{ transform:translateY(1px) }
+    input[type=file]{ display:none }
+  </style>
+</head>
+<body>
+  <section class="clients-section" id="clients">
+    <div class="container">
+      <div class="header">
+        <span class="eyebrow">Our Clients</span>
+        <h2>Trusted by Happy Clients</h2>
+        <p class="sub">Bas neeche apne clients ki <b>photo/logo</b> replace kar do. Softer green theme hai. 🌿</p>
+      </div>
+
+      <div class="featured">
+        <div class="frame">
+          <img id="featuredImg" alt="Featured client photo" src="https://via.placeholder.com/800x450.png?text=Add+Client+Photo" />
+        </div>
+        <div class="hint">
+          <small>Featured image path (HTML):</small>
+          <code class="copy">&lt;img src="images/your-photo.jpg" alt="Client"&gt;</code>
+        </div>
+        <div class="uploader">
+          <label class="btn" for="upload">Upload client photo</label>
+          <input id="upload" type="file" accept="image/*">
+        </div>
+      </div>
+
+      <div class="grid">
+        <figure class="card">
+          <div class="logo">
+            <img alt="Client 1" src="https://via.placeholder.com/200x200.png?text=Logo+1">
+          </div>
+          <figcaption class="tag">Client 1</figcaption>
+        </figure>
+        <figure class="card">
+          <div class="logo">
+            <img alt="Client 2" src="https://via.placeholder.com/200x200.png?text=Logo+2">
+          </div>
+          <figcaption class="tag">Client 2</figcaption>
+        </figure>
+        <figure class="card">
+          <div class="logo">
+            <img alt="Client 3" src="https://via.placeholder.com/200x200.png?text=Logo+3">
+          </div>
+          <figcaption class="tag">Client 3</figcaption>
+        </figure>
+        <figure class="card">
+          <div class="logo">
+            <img alt="Client 4" src="https://via.placeholder.com/200x200.png?text=Logo+4">
+          </div>
+          <figcaption class="tag">Client 4</figcaption>
+        </figure>
+        <figure class="card">
+          <div class="logo">
+            <img alt="Client 5" src="https://via.placeholder.com/200x200.png?text=Logo+5">
+          </div>
+          <figcaption class="tag">Client 5</figcaption>
+        </figure>
+      </div>
+
+      <p class="footer-note">Tip: Bas image <code>src</code> replace karke apne photos/logos daal do.</p>
+    </div>
+  </section>
+
+  <script>
+    (function(){
+      const input = document.getElementById('upload');
+      const img = document.getElementById('featuredImg');
+      if(!input || !img) return;
+      input.addEventListener('change', (e)=>{
+        const f = e.target.files && e.target.files[0];
+        if(!f) return;
+        const url = URL.createObjectURL(f);
+        img.src = url;
+      });
+    })();
+  </script>
+</body>
+</html>
